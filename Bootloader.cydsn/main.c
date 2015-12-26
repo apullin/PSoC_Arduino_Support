@@ -48,7 +48,8 @@ int main()
   CyGlobalIntEnable;
   
 	/* Initialize PWM */
-  PWM_Start();  
+  //PWM_Start();   //PWM block no longer used, in favor of "Dimmer" block
+  Control_Dimmer_Write(1);	// enable fader
   Reset_Timer_WriteCounter(0);
   Reset_Timer_Start();
   #ifdef USE_UART
